@@ -12,6 +12,7 @@ const options = {
 }
 
 const req = https.request(options, (res) => {
+    console.log("Posting!")
   res.on('data', (data) => {
     if (res.statusCode != 202) {
       let parsed = JSON.parse(data)
